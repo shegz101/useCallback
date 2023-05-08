@@ -1,10 +1,11 @@
 import "./App.css";
+import Parent from "./components/Parent";
 
 function App() {
   return (
-    <div>
-      <h1>useCallback</h1>
-    </div>
+    <>
+      <Parent />
+    </>
   );
 }
 

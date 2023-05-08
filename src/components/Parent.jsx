@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import Title from "./Title";
+import Button from "./Button";
+import Display from "./Display";
 
 const Parent = () => {
-  return <div></div>;
+  const [salary, setSalary] = useState(2000);
+  const [age, setAge] = useState(30);
+
+  const incrementAge = () => {
+    setAge(age + 5);
+  };
+
+  const incrementSalary = () => {
+    setSalary(salary + 100);
+  };
+  return (
+    <div>
+      <Title />
+      <Display text="age" displayvalue={age} />
+      <Button handleClick={incrementAge}>Update Age</Button>
+      <Display text="salary" displayvalue={salary} />
+      <Button handleClick={incrementSalary}>Update Salary</Button>
+    </div>
+  );
 };
 
 export default Parent;
-
-int index = -1;
-inti = 0; 
-while(size > 0) 
-{ if(a[i] == key) { 
-  index = i; break; 
-} if(a[i] > key)) {
-   break; 
-  } i++; 
-} 
-return index;
